@@ -1,0 +1,10 @@
+DIGITAL GALLERY WORKSHOP E-PORTFOLIO 2026  -  tema Halloween (hitam + oranye), font Inter
+Buka index.html (butuh internet untuk Tailwind, GSAP, font, ikon).
+
+  index.html / katalog.html / update-data.html
+  css/  js/  video/  img/
+  ambil-preview.py   ambil gambar preview dari link Canva otomatis:  python ambil-preview.py
+  js/tailwind-config.js  warna tema (cream=latar hitam, dark=teks putih tulang, accent=oranye)
+
+PERINGATAN: js/data-karya.js di zip ini hanya DATA CONTOH.
+Setelah ekstrak, timpa dengan data-karya.js aslimu (atau buat ulang lewat update-data.html).

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37 E-Portfolio Siswa — Digital Gallery Workshop 2026</title>
+
+    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="css/katalog.css">
+    <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/editorial.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%83%3C/text%3E%3C/svg%3E">
+</head>
+<body class="bg-cream text-dark font-sans selection:bg-accent selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="mq-btn"><i class="fa-solid fa-arrow-left"></i> Beranda</a>
+            <a href="index.html" class="font-extrabold uppercase text-xs tracking-[0.3em] hidden sm:block">Workshop Exhibition <span class="text-accent">’26</span></a>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-muted"><span class="text-accent" data-count>37</span> karya</span>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-6 pt-8 pb-20">
+
+        <!-- HERO EDITORIAL TITLE SECTION -->
+        <section class="mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-6 border-b border-dark/10">
+                <div>
+                    <span class="text-[11px] font-semibold text-muted uppercase tracking-[0.3em] mb-3 block">Complete student directory</span>
+                    <h1 class="font-extrabold uppercase text-4xl sm:text-6xl lg:text-7xl tracking-tighter text-dark leading-[.95]">
+                        <span data-count>37</span> Visions. <br>
+                        <span class="text-accent"><span data-count>37</span> digital portfolios.</span>
+                    </h1>
+                </div>
+
+                <p class="text-sm sm:text-base text-subtleDark max-w-lg font-medium leading-relaxed">
+                    Jelajahi seluruh karya e-portfolio buatan siswa-siswi SMK peserta workshop. Klik pada kartu mana saja untuk langsung mengunjungi website portofolio interaktif yang mereka bangun.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEARCH & CATEGORY FILTER TOOLBAR -->
+        <section class="mb-6 flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4">
+            
+            <!-- Real-time Search Input -->
+            <div class="relative flex-1 max-w-md">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-muted text-sm"></i>
+                <input type="text" id="search-input" placeholder="Cari nama siswa, sekolah, atau judul karya..." class="w-full pl-11 pr-4 py-3 bg-white border border-dark/20 rounded-full text-xs font-medium text-dark focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent shadow-sm transition-all">
+                <button id="clear-search" class="hidden absolute right-4 top-1/2 -translate-y-1/2 text-xs text-muted hover:text-dark">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="flex flex-wrap gap-2" id="category-pills">
+            <!-- Tombol kategori dibuat otomatis dari data -->
+            </div>
+
+        </section>
+
+        <!-- ASYMMETRICAL MASONRY BENTO GRID CONTAINER -->
+        <div id="gallery-area">
+            <div id="mq-bar" class="flex justify-end mb-4"><button id="mq-toggle" class="mq-btn"></button></div>
+            <div id="mq-cols" class="mq-cols hidden"></div>
+            <section id="bento-grid" class="hidden"></section>
+        </div>
+
+        <!-- EMPTY STATE (WHEN SEARCH HAS NO MATCHES) -->
+        <div id="empty-state" class="hidden py-24 text-center">
+            <div class="w-16 h-16 rounded-full bg-creamDark border border-dark/15 flex items-center justify-center mx-auto mb-4 text-muted text-2xl">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <h3 class="font-syne font-bold text-xl text-dark">Tidak Ada Karya Ditemukan</h3>
+            <p class="text-xs text-muted mt-1">Coba gunakan kata kunci lain atau ubah filter kategori.</p>
+            <button onclick="resetFilters()" class="mt-4 px-5 py-2 bg-dark text-cream text-xs font-bold rounded-full uppercase tracking-wider hover:bg-accent transition-colors">
+                Reset Filter & Pencarian
+            </button>
+        </div>
+
+    </main>
+
+    <!-- EDITORIAL FOOTER -->
+    <footer class="border-t border-dark/10 py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <span class="font-extrabold uppercase text-lg tracking-tight">Workshop E-Portofolio <span class="text-accent">2026</span></span>
+                <p class="text-[11px] tracking-[0.18em] uppercase text-muted mt-1">Pameran Hasil Karya Portofolio Digital Siswa SMK</p>
+            </div>
+            <a href="index.html" class="mq-btn"><i class="fa-solid fa-arrow-left"></i> Kembali ke beranda</a>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT: DATA & INTERACTIVE MASONRY BENTO GRID -->
+    <script src="js/data-karya.js"></script>
+    <script src="js/karya-loader.js"></script>
+    <script src="js/marquee.js"></script>
+    <script src="js/katalog.js"></script>
+</body>
+</html>

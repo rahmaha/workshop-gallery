@@ -1,0 +1,24 @@
+/* Marquee looping: dipakai index (horizontal) dan katalog (vertikal) */
+.mq-x { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.mq-col { overflow: hidden; -webkit-mask-image: linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent); }
+
+.mq-track { display: flex; will-change: transform; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 40s; }
+.mq-track.x { width: max-content; animation-name: mq-x; }
+.mq-track.y { flex-direction: column; animation-name: mq-y; }
+.mq-track.rev { animation-direction: reverse; }
+.mq-track.x > * { flex: none; margin-right: 24px; }
+.mq-track.y > * { margin-bottom: 36px; }
+
+@keyframes mq-x { to { transform: translateX(-50%); } }
+@keyframes mq-y { to { transform: translateY(-50%); } }
+
+/* Jeda: lewat tombol, atau otomatis saat kursor di atas karya */
+.mq-paused .mq-track, .mq-track:hover { animation-play-state: paused; }
+
+.mq-item { width: 280px; }
+@media (min-width: 640px) { .mq-item { width: 320px; } }
+
+.mq-cols { display: grid; grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); gap: 32px; height: var(--h, 80vh); }
+.mq-cols.hidden { display: none; }
+.mq-btn { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; border: 0; border-bottom: 1px solid rgba(242,238,230,.35); background: none; font: 600 10px 'Inter', sans-serif; letter-spacing: .22em; text-transform: uppercase; color: #F2EEE6; transition: border-color .2s, color .2s; }
+.mq-btn:hover { border-bottom-color: #FF6B1A; color: #FF6B1A; }

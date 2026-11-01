@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gallery Workshop E-Portfolio 2026</title>
+
+    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/editorial.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%83%3C/text%3E%3C/svg%3E">
+</head>
+<body class="bg-cream text-dark font-sans selection:bg-accent selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-cream/90 backdrop-blur-md border-b border-dark/10 transition-all duration-300" id="main-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-syne font-extrabold text-xl tracking-tighter uppercase flex items-center gap-2">
+                <span class="w-3 h-3 bg-accent rounded-full inline-block animate-pulse"></span>
+                E-PORTFOLIO <span class="text-accent">'26</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase">
+                <a href="#galeri" class="hover:text-accent transition-colors">Galeri Karya</a>
+                <a href="#tim" class="hover:text-accent transition-colors">Tim Anggota</a>
+                <a href="#dokumentasi" class="hover:text-accent transition-colors">Dokumentasi</a>
+                <a href="#info" class="hover:text-accent transition-colors">Tentang Workshop</a>
+            </div>
+
+            <a href="#galeri" class="px-5 py-2.5 bg-accent text-black rounded-full font-bold text-xs uppercase tracking-wider hover:bg-dark transition-all transform hover:scale-105 shadow-md">
+                Jelajahi Karya
+            </a>
+        </div>
+    </nav>
+
+    <!-- VIDEO HERO (tampil pertama di monitor booth) -->
+    <section id="video-hero" class="relative h-screen pt-[68px] bg-black overflow-hidden">
+        <video id="hero-video" class="absolute inset-0 w-full h-full object-cover" style="top:68px;height:calc(100% - 68px)"
+               autoplay muted loop playsinline preload="auto" poster="video/poster.jpg">
+            <source src="video/workshop.mp4" type="video/mp4">
+        </video>
+        <!-- Cadangan jika file video belum ada / gagal dimuat -->
+        <div id="video-fallback" class="hidden absolute inset-0 flex items-center justify-center text-center px-6 bg-creamDark text-white" style="top:68px">
+            <div>
+                <p class="font-syne text-accent font-bold tracking-widest uppercase text-sm">Video segera hadir</p>
+                <p class="font-syne font-extrabold text-4xl sm:text-6xl uppercase mt-2">Digital Workshop Gallery '26</p>
+            </div>
+        </div>
+        <!-- Overlay judul kecil -->
+        <div class="absolute left-6 bottom-8 z-10 text-white pointer-events-none">
+            <p class="font-syne font-extrabold text-lg sm:text-2xl uppercase tracking-tight drop-shadow">Digital Workshop Gallery <span class="text-accent">'26</span></p>
+        </div>
+        <!-- Tombol suara -->
+        <button id="video-sound" class="absolute right-6 bottom-8 z-10 w-11 h-11 rounded-full bg-black/50 text-white hover:bg-accent transition-colors" aria-label="Nyalakan suara">
+            <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+        <!-- Petunjuk scroll -->
+        <a href="#judul" class="absolute left-1/2 -translate-x-1/2 bottom-6 z-10 flex flex-col items-center gap-1 text-white/90 hover:text-accent transition-colors">
+            <span class="text-[10px] uppercase tracking-widest font-bold">Scroll</span>
+            <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </a>
+    </section>
+
+    <!-- HERO SECTION -->
+    <section id="judul" class="min-h-screen pt-32 pb-20 px-6 flex flex-col justify-between relative bg-grid-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4 border-b border-dark/20 pb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full font-bold text-xs uppercase tracking-widest mb-3">
+                        Editorial Exhibition & Catalog
+                    </span>
+                    <h1 class="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl leading-none uppercase tracking-tight">
+                        DIGITAL <br>
+                        <span class="italic font-normal text-accent">WORKSHOP</span> <br>
+                        GALLERY '26
+                    </h1>
+                </div>
+                <div class="max-w-md text-sm text-subtleDark font-medium leading-relaxed">
+                    Pameran e-portfolio hasil karya terpilih dari peserta Digital Workshop 2026. Menampilkan inovasi Web Development, UI/UX Design, dan Creative Graphic Art secara terkurasi.
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-dark/10">
+                <div class="p-4 bg-white/5 backdrop-blur border border-dark/10 rounded-2xl">
+                    <p class="font-syne text-3xl md:text-4xl font-extrabold text-accent">30+</p>
+                    <p class="text-xs uppercase font-bold text-muted mt-1">Karya Murid Terkurasi</p>
+                </div>
+                <div class="p-4 bg-white/5 backdrop-blur border border-dark/10 rounded-2xl">
+                    <p class="font-syne text-3xl md:text-4xl font-extrabold text-dark">08</p>
+                    <p class="text-xs uppercase font-bold text-muted mt-1">Tim Anggota</p>
+                </div>
+                <div class="p-4 bg-white/5 backdrop-blur border border-dark/10 rounded-2xl">
+                    <p class="font-syne text-3xl md:text-4xl font-extrabold text-accent">100%</p>
+                    <p class="text-xs uppercase font-bold text-muted mt-1">Proyek Interaktif</p>
+                </div>
+                <div class="p-4 bg-white/5 backdrop-blur border border-dark/10 rounded-2xl">
+                    <p class="font-syne text-3xl md:text-4xl font-extrabold text-dark">2026</p>
+                    <p class="text-xs uppercase font-bold text-muted mt-1">Edisi Tahunan</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="flex justify-center mt-12">
+            <a href="#galeri" class="flex flex-col items-center gap-2 group">
+                <span class="text-xs uppercase tracking-widest font-bold text-muted group-hover:text-accent transition-colors">Gulir Ke Bawah</span>
+                <div class="w-6 h-10 border-2 border-dark rounded-full flex justify-center p-1 group-hover:border-accent transition-colors">
+                    <div class="w-1.5 h-3 bg-dark rounded-full animate-mouse-wheel group-hover:bg-accent"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 1: GALERI KARYA PILIHAN (MINIMALIS) -->
+    <section id="galeri" class="py-24 px-6 bg-cream border-t border-dark/10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto mb-10">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-end gap-6 border-b border-dark/15 pb-8">
+                <div>
+                    <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">01 / Karya Pilihan</span>
+                    <h2 class="font-syne font-extrabold text-4xl sm:text-6xl uppercase tracking-tight mt-1">Galeri Karya Murid</h2>
+                </div>
+                <button id="gal-pause" class="mq-btn"></button>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="mq-x" id="gallery-marquee">
+                <div id="student-gallery-wrapper"></div>
+            </div>
+            <div class="mt-10 text-center">
+                <a href="katalog.html" class="inline-block px-7 py-3 bg-accent text-black rounded-full font-bold text-xs uppercase tracking-wider hover:bg-dark transition-colors">
+                    Lihat Semua Karya <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 2: PROFIL TIM 8 ANGGOTA (LANDO NORRIS FANNED CARDS STYLE) -->
+    <section id="tim" class="py-24 px-6 bg-creamDark border-t border-b border-dark/10 relative">
+        <div class="max-w-7xl mx-auto text-center mb-8">
+            <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">02 / INTERACTIVE TEAM STACK</span>
+            <h2 class="font-syne font-extrabold text-4xl sm:text-6xl uppercase tracking-tight mt-1">
+                ANGGOTA TIM WORKSHOP
+            </h2>
+            
+            <!-- Mouse Scroll Indicator Banner (NO ARROWS NEEDED) -->
+            <div class="inline-flex items-center gap-3 px-6 py-3 bg-creamDark border border-dark/20 rounded-full shadow-sm mt-6">
+                <div class="w-5 h-8 border-2 border-accent rounded-full flex justify-center p-1">
+                    <div class="w-1 h-2 bg-accent rounded-full animate-mouse-wheel"></div>
+                </div>
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-dark">
+                    Scroll Mouse / Seret Di Area Kartu Untuk Berpindah Anggota
+                </span>
+            </div>
+        </div>
+
+        <!-- Fanned Cards Interactive Area -->
+        <div class="max-w-5xl mx-auto my-6">
+            <div class="fanned-stage" id="fanned-stage-area">
+                <!-- 8 Cards generated via JS -->
+            </div>
+        </div>
+
+        <!-- Active Team Bio Panel (GSAP Animated Update) -->
+        
+    <div class="max-w-3xl mx-auto mt-10 p-8 bg-creamDark border border-dark/20 rounded-3xl shadow-lg" id="team-bio-panel">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+            <img id="bio-avatar" class="w-24 h-24 rounded-2xl object-cover border-2 border-accent shadow-md" src="" alt="Member Avatar">
+
+            <div class="text-center sm:text-left flex-1">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-dark/10 pb-3 mb-3">
+                    <div>
+                        <span id="bio-badge" class="px-3 py-1 bg-accent/10 text-accent font-bold text-xs rounded-full uppercase tracking-wider inline-block mb-2">
+                            Project Leader
+                        </span>
+
+                        <h3 id="bio-name" class="font-syne font-extrabold text-2xl sm:text-3xl text-dark">
+                            Name
+                        </h3>
+
+                        <p id="bio-nim" class="text-xs font-medium text-muted mt-1 tracking-wide">
+                            NIM
+                        </p>
+                    </div>
+
+                    <span id="bio-index" class="font-syne font-bold text-2xl text-muted">
+                        01 / 08
+                    </span>
+                </div>
+
+                <p id="bio-role" class="text-sm font-bold text-accent uppercase tracking-wide mb-2">
+                    Role Title
+                </p>
+
+                <p id="bio-desc" class="text-sm text-subtleDark leading-relaxed">
+                    Description goes here.
+                </p>
+
+                <blockquote id="bio-quote" class="mt-4 p-3 bg-cream rounded-xl text-xs italic text-muted border-l-4 border-accent">
+                    "Quote goes here"
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <!-- SECTION 3: DOKUMENTASI WORKSHOP -->
+    <section id="dokumentasi" class="py-24 px-6 bg-cream border-b border-dark/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">03 / HIGHLIGHTS & MEDIA</span>
+                <h2 class="font-syne font-extrabold text-4xl sm:text-6xl uppercase tracking-tight mt-1">
+                    DOKUMENTASI WORKSHOP
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Video Recap Player Mockup -->
+                <div class="lg:col-span-7 bg-creamDark border border-dark/10 rounded-3xl p-4 sm:p-6 text-dark shadow-xl">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            <span class="text-xs font-mono ml-2 text-white/60">RECAP_WORKSHOP_2026.MP4</span>
+                        </div>
+                        <span class="px-2 py-0.5 bg-accent text-white font-bold text-[10px] rounded uppercase">4K HD</span>
+                    </div>
+
+                    <div class="relative aspect-video rounded-2xl overflow-hidden bg-zinc-900 group cursor-pointer border border-white/10" id="video-mockup-trigger">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Video Recap Cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Center Play Button -->
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <div class="w-20 h-20 rounded-full bg-accent text-white flex items-center justify-center text-2xl group-hover:scale-110 shadow-2xl transition-transform">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                            <span class="font-syne font-bold text-sm tracking-widest uppercase mt-4 text-white">Putar Video Recap (2:45)</span>
+                        </div>
+
+                        <!-- Mock Player Controls -->
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white/80">
+                            <span>01:12 / 02:45</span>
+                            <div class="flex-1 mx-4 h-1.5 bg-white/20 rounded-full overflow-hidden">
+                                <div class="w-1/2 h-full bg-accent"></div>
+                            </div>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation Photo Grid -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" data-caption="Sesi Mentoring UI/UX Design & Typography">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Mentoring Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                            <span class="text-xs font-bold text-accent uppercase">Mentoring</span>
+                            <p class="text-xs font-semibold">Diskusi Layout & Grid Systems</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" data-caption="Presentasi Karya Murid Di Depan Mentor">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Student Presentation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                            <span class="text-xs font-bold text-accent uppercase">Review</span>
+                            <p class="text-xs font-semibold">Presentasi Akhir E-Portfolio</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" data-caption="Workshop Live Coding & Interactive Animation">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Live Coding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                            <span class="text-xs font-bold text-accent uppercase">Live Code</span>
+                            <p class="text-xs font-semibold">Eksperimentasi GSAP Animation</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" data-caption="Sesi Foto Bersama Anggota & Peserta">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Group Photo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+                            <span class="text-xs font-bold text-accent uppercase">Cohort 2026</span>
+                            <p class="text-xs font-semibold">Selebrasi Penutupan Exhibition</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TENTANG WORKSHOP -->
+    <section id="info" class="py-20 px-6 bg-creamDark text-dark border-t border-dark/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div>
+                <span class="font-syne text-xs font-bold text-accent tracking-widest uppercase">ABOUT WORKSHOP</span>
+                <h2 class="font-syne font-extrabold text-3xl sm:text-5xl uppercase tracking-tight mt-1">
+                    DIGITAL WORKSHOP 2026
+                </h2>
+                <p class="text-sm text-zinc-400 max-w-xl mt-3 leading-relaxed">
+                    Program akselerasi talenta digital modern yang menggabungkan estetika desain editorial dengan teknologi pengembangan web terkini.
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <a href="#galeri" class="px-6 py-3 bg-accent text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-accentHover transition-colors">
+                    Lihat Katalog Karya
+                </a>
+                <button onclick="alert('Terima kasih! Brosur Digital Portfolio Workshop 2026 siap diunduh.')" class="px-6 py-3 border border-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-white hover:text-dark transition-colors">
+                    Download Catalog PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 bg-black text-white/60 text-xs border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© 2026 Digital Gallery Workshop E-Portfolio. All rights reserved.</p>
+            <div class="flex items-center gap-6 font-semibold uppercase tracking-wider text-[11px]">
+                <span>Yogyakarta, Indonesia</span>
+                <span>•</span>
+                <span>created by Rahma</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: STUDENT PORTFOLIO DETAIL MODAL -->
+    <div id="portfolio-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-cream border border-dark/20 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
+            <button id="close-modal-btn" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-accent text-black flex items-center justify-center hover:bg-accent transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <div id="modal-content">
+                <!-- Injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: DOCUMENTATION LIGHTBOX MODAL -->
+    <div id="doc-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col items-center justify-center p-4">
+        <button id="close-doc-btn" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-accent transition-colors">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <img id="doc-modal-img" src="" alt="Doc Preview" class="max-w-full max-h-[75vh] rounded-2xl object-contain shadow-2xl">
+        <p id="doc-modal-caption" class="text-white font-syne font-bold text-lg mt-4 text-center"></p>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="js/data-karya.js"></script>
+    <script src="js/karya-loader.js"></script>
+    <script src="js/marquee.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

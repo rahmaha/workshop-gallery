@@ -1,0 +1,1 @@
+Gambar preview karya (diisi otomatis oleh ambil-preview.py, atau manual)

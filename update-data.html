@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Update Data Karya</title>
+<link rel="stylesheet" href="css/update.css">
+</head>
+<body>
+<main>
+  <h1>Update Data Karya</h1>
+  <p class="sub">Ubah file CSV submission jadi <code>js/data-karya.js</code>. Semua dibaca di komputermu, tidak ada yang diunggah.</p>
+
+  <div class="box">
+    <h2>1. Pilih file CSV</h2>
+    <input type="file" id="file" accept=".csv,text/csv">
+    <label><input type="checkbox" id="useimg"> Pakai screenshot dari folder <code>img/</code> (nama file: <code>1.jpg</code>, <code>2.jpg</code>, ... sesuai kolom No)</label>
+    <p id="status" class="sub" style="margin-top:12px"></p>
+  </div>
+
+  <div class="box" id="result" hidden>
+    <h2>2. Cek hasil</h2>
+    <div id="cats" class="chips"></div>
+    <div id="warns"></div>
+  </div>
+
+  <div class="box" id="out" hidden>
+    <h2>3. Simpan</h2>
+    <button id="dl">Unduh data-karya.js</button>
+    <p class="sub" style="margin:12px 0">Timpa file lama di folder <code>js/</code>, lalu muat ulang index.html dan katalog.html.</p>
+    <textarea id="preview" readonly></textarea>
+  </div>
+</main>
+<script src="js/update-data.js"></script>
+</body>
+</html>

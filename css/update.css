@@ -1,0 +1,15 @@
+body{margin:0;background:#F6F5F0;color:#1A1A1A;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:40px 24px 80px}
+h1{font-family:'Syne',sans-serif;font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 4px}
+p.sub{color:#737373;margin:0 0 28px}
+.box{background:#fff;border:1px solid rgba(26,26,26,.15);border-radius:16px;padding:20px;margin-bottom:16px}
+.box h2{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#D94E28}
+button,.btn{cursor:pointer;font:700 13px 'Plus Jakarta Sans',sans-serif;padding:11px 20px;border-radius:999px;border:0;background:#1A1A1A;color:#F6F5F0}
+button:disabled{opacity:.35;cursor:not-allowed}
+button:hover:not(:disabled){background:#D94E28}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#EBE9DE;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+.warn{color:#B83D1B;font-size:13px;margin:6px 0 0}
+textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace;border:1px solid rgba(26,26,26,.2);border-radius:10px;padding:10px;box-sizing:border-box}
+label{display:block;margin-top:12px;font-size:14px}
+code{background:#EBE9DE;padding:1px 6px;border-radius:4px}
