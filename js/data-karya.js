@@ -9,11 +9,9 @@ Enrico Adnan Sulaeman | https://stembayo.my.canva.site/salinan-template-02 |  | 
 Ibnu Inayat | https://stembayo.my.canva.site/salinan-template-01 |  | 10 KGS | KGS | img/06.jpg
 Ahmad Awan Dawud | https://stembayo.my.canva.site/dahwuvuf8oq |  | 10 KA A | KA | img/07.jpg
 Abigail Anindita Putri | https://canva.link/8voxi3dq4onxfhd |  | XI KA A | KA | img/08.jpg
-Mahadi Alim Musthofa | https://canva.link/7kxu5bp3t1ofe1c |  | 11 TEK B | TEK | img/09.jpg
 Ahmad Syauqi Nur Muharram | https://stembayo.my.canva.site/workshop |  | X DPIB | DPIB | img/10.jpg
 Josemaria Escriva Bryan Susanto | https://stembayo.my.canva.site/dahwumny4ya |  | 11 KA B | KA | img/11.jpg
 Raditya Brian Seva | https://canva.link/8a2as5ghcycg68f |  | 11 TEK B | TEK | img/12.jpg
-Muhammad Izzudin Al Qosam | https://canva.link/vrnwt6h160vergl |  | 11 TEK B | TEK | img/13.jpg
 Anindita Farah Aqila | https://stembayo.my.canva.site/portofolio-anindita |  | XI Kimia Analisis A | KA | img/14.jpg
 Rifqi Al-ziqran Simanjuntak | https://rifqiibismilahitb.my.canva.site/ |  | 11 GP B | GP | img/15.jpg
 Radhitya Ikhwan Narraya | https://stembayo.my.canva.site/dahwuwqjaiu |  | 11 TP B | TP | img/16.jpg
@@ -31,11 +29,10 @@ Amanda diva safira | https://canva.link/57w1j5h8vnv8pxq |  | 11 kgs | KGS | img/
 Adnan Berkah Nur Putra | https://adnan-berkah-nur-putra.my.canva.site/ |  | XI TITL | TITL | img/28.jpg
 Siti Nurazizah | https://canva.link/hhg9e2ead46mzsh |  | XI TKI B | TKI | img/29.jpg
 Nasywan Rafif Awali | https://stembayo.my.canva.site/dahwuoiepwc |  | 11 Kimia Analisis B | KA | img/30.jpg
-AWALLIYAH YASMIN FATHANMUBINA NUGRAHA | https://canva.link/j17s03lvfjpu5hi |  | XI GP A | GP | img/31.jpg
+Awalliyah Yasmin Fathanmubina Nugraha | https://canva.link/j17s03lvfjpu5hi |  | XI GP A | GP | img/31.jpg
 Farisha Putri Nurkhasanah | https://owl-0dmmj6.my.canva.site/ |  | 11 GP A | GP | img/32.jpg
 Gadiza Syifa Atlanta | https://stembayo.my.canva.site/dahwunsmqku |  | XI GP A | GP | img/33.jpg
 Rafa Putra Pratama | https://stembayo.my.canva.site/dahwuurhape |  | 11 TP B | TP | img/34.jpg
-Rezkia Awalia Oktaviano | https://canva.link/q7tzz1fbdc51ni1 |  | XI TP B | TP | img/35.jpg
 Naufal Maghani Pratama | https://stembayo.my.canva.site/dahwumt-v6m |  | 11 TP B | TP | img/36.jpg
 Zanuar Dwi Safitri | https://lilikkis.my.canva.site/salinan-template-01 |  | 10 TKI | TKI | img/37.jpg
 `;

@@ -7,88 +7,111 @@
 // 2. DATA: TEAM MEMBERS (8 ANGGOTA TIM)
 // ==========================================
 const teamMembers = [
-    {
-        id: 1,
-        name: "Ammar Al Hakim Asshiddiqi",
-        role: "Ketua Pelaksana; Divisi PDD",
-        nim: "25105260237",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-        badge: "PROJECT LEADER",
-        bio: "Spesialis Design System & Product Strategy dengan pengalaman 8+ tahun membimbing desainer muda menciptakan portofolio berkelas internasional.",
-        quote: "Desain bukan sekadar tentang estetika visual, melainkan bagaimana pengalaman tersebut memberdayakan pengguna."
-    },
-    {
-        id: 2,
-        name: "Rizky Pratama",
-        role: "Frontend Architect",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-        badge: "CREATIVE TECH",
-        bio: "Pakar GSAP, WebGL, dan micro-interaction. Bertanggung jawab atas kualitas animasi dan performa web interaktif murid.",
-        quote: "Kode adalah kuas lukis di era digital. Pastikan setiap barisnya menyampaikan cerita."
-    },
-    {
-        id: 3,
-        name: "Maya Salsabila",
-        role: "Editorial & Brand Lead",
-        avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
-        badge: "ART DIRECTION",
-        bio: "Pengarah gaya visual edisi 2026. Fokus pada tipografi presisi, harmoni warna, dan kurasi katalog pameran.",
-        quote: "Tipografi menyampaikan nada suara sebelum kata-kata itu sempat dibaca."
-    },
-    {
-        id: 4,
-        name: "Devon Vance",
-        role: "3D Motion Specialist",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-        badge: "MOTION DESIGN",
-        bio: "Perintis dalam penerapan animasi 3D modern pada web browser menggunakan Spline dan Three.js.",
-        quote: "Bawa pergerakan dinamis ke dalam ruang hampa untuk memicu kejutan visual."
-    },
-    {
-        id: 5,
-        name: "Nadia Utami",
-        role: "User Research Coach",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
-        badge: "UX RESEARCH",
-        bio: "Membantu murid mengolah wawasan pengguna menjadi fondasi utama konsep solusi produk digital.",
-        quote: "Empati pada pengguna selalu menjadi prioritas utama sebelum piksel disusun."
-    },
-    {
-        id: 6,
-        name: "Julian Vance",
-        role: "Fullstack Advisor",
-        avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80",
-        badge: "BACKEND & API",
-        bio: "Merancang arsitektur serverles dan integrasi API cepat untuk mendukung showcase portofolio murid.",
-        quote: "Kecepatan dan performa adalah fondasi tak kasat mata dari desain yang hebat."
-    },
-    {
-        id: 7,
-        name: "Siti Rahma",
-        role: "Creative Curator",
-        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",
-        badge: "CURATOR",
-        bio: "Menseleksi dan menggolongkan karya murid terbaik untuk dipublikasikan pada katalog majalah fisik dan digital.",
-        quote: "Keotentikan dan keberanian bergaya menentukan daya tarik sebuah portofolio."
-    },
-    {
-        id: 8,
-        name: "Kevin Sanjaya",
-        role: "Web Performance Tech",
-        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
-        badge: "OPTIMIZATION",
-        bio: "Memastikan aksesibilitas (a11y) dan pengoptimalan aset digital hingga mencapai skor Lighthouse sempurna.",
-        quote: "Buat web yang cepat, inklusif, dan siap dipamerkan ke industri global."
-    }
+  {
+    id: 1,
+    name: "Ammar Al Hakim Asshiddiqi",
+    role: "Ketua Pelaksana; Divisi PDD",
+    nim: "25105260237",
+    badge: "PROJECT LEADER",
+    bio: "Mengoordinasikan seluruh rangkaian kegiatan Digital Workshop 2026 serta mengarahkan koordinasi antaranggota dan divisi.",
+    quote: "Kegiatan yang bermakna terwujud ketika setiap orang bergerak menuju tujuan yang sama.",
+    avatar: "URL_FOTO_AMMAR"
+  },
+  {
+    id: 2,
+    name: "Rischa Nuril Fadila",
+    role: "Sekretaris; Divisi Konsumsi",
+    nim: "25105260270",
+    badge: "SECRETARY",
+    bio: "Mengelola administrasi dan kebutuhan kesekretariatan serta membantu koordinasi konsumsi untuk mendukung kelancaran kegiatan.",
+    quote: "Keteraturan dalam persiapan membantu setiap kegiatan berjalan lebih lancar.",
+    avatar: "URL_FOTO_RISCHA"
+  },
+  {
+    id: 3,
+    name: "Lisa Nazhirotun Nisa",
+    role: "Bendahara; Divisi Konsumsi",
+    nim: "25105260297",
+    badge: "TREASURER",
+    bio: "Mengelola pencatatan dan kebutuhan keuangan kegiatan serta mendukung koordinasi konsumsi peserta.",
+    quote: "Tanggung jawab dalam hal kecil ikut menentukan keberhasilan bersama.",
+    avatar: "URL_FOTO_LISA"
+  },
+  {
+    id: 4,
+    name: "Elsa Yunia",
+    role: "Divisi Acara (Pembawa Acara)",
+    nim: "25105260198",
+    badge: "EVENT HOST",
+    bio: "Memandu jalannya acara dan menghubungkan setiap sesi agar rangkaian workshop berlangsung tertib dan komunikatif.",
+    quote: "Suasana yang hangat membuat setiap pengalaman lebih berkesan.",
+    avatar: "URL_FOTO_ELSA"
+  },
+  {
+    id: 5,
+    name: "Apaf Nur Fauzia",
+    role: "Divisi Acara (Narasumber 1)",
+    nim: "25105260234",
+    badge: "THEORY SPEAKER",
+    bio: "Menyampaikan materi dan penjelasan konseptual sebagai bekal peserta memahami dasar serta tahapan pembuatan portofolio digital.",
+    quote: "Pemahaman yang kuat menjadi awal dari praktik yang terarah.",
+    avatar: "URL_FOTO_APAF"
+  },
+  {
+    id: 6,
+    name: "Rahma Hayuning Astuti",
+    role: "Divisi Acara (Narasumber 2)",
+    nim: "25105260251",
+    badge: "PRACTICE MENTOR",
+    bio: "Mendampingi peserta dalam demonstrasi dan praktik pembuatan portofolio digital serta membantu peserta menerapkan materi secara langsung.",
+    quote: "Belajar menjadi lebih bermakna ketika kita berani mencoba dan berkarya.",
+    avatar: "URL_FOTO_RAHMA"
+  },
+  {
+    id: 7,
+    name: "Miftahul Janaah",
+    role: "Divisi PDD",
+    nim: "25105260255",
+    badge: "PUBLICATION & MEDIA",
+    bio: "Mendukung publikasi dan dokumentasi kegiatan serta menyiapkan kebutuhan media visual Digital Workshop 2026.",
+    quote: "Setiap momen memiliki cerita yang layak untuk dibagikan.",
+    avatar: "URL_FOTO_MIFTAHUL"
+  },
+  {
+    id: 8,
+    name: "Ibnu Allika Prabo Warasto",
+    role: "Divisi Humas; Divisi Perlengkapan",
+    nim: "25105260264",
+    badge: "PUBLIC RELATIONS & LOGISTICS",
+    bio: "Menghubungkan komunikasi dengan pihak terkait serta menyiapkan kebutuhan perlengkapan agar kegiatan berjalan lancar.",
+    quote: "Kolaborasi yang baik juga dibangun melalui komunikasi dan kesiapan.",
+    avatar: "URL_FOTO_IBNU"
+  }
 ];
 
 // ==========================================
 // 3. GALERI KARYA PILIHAN (MARQUEE LOOPING)
 // ==========================================
+
+// Pilih 5 karya secara manual berdasarkan ID dari works.js
+const featuredWorkIds = [
+    2,
+    12,
+    5,
+    33,
+    26,
+    1
+];
+
 function renderGallerySlides() {
     const track = document.getElementById('student-gallery-wrapper');
     const view = document.getElementById('gallery-marquee');
-    const items = studentWorks.slice(0, 5).map(work => `
+
+    const selectedWorks = featuredWorkIds
+        .map(id => studentWorks.find(work => work.id === id))
+        .filter(Boolean);
+
+    const items = selectedWorks.map(work => `
         <a class="mq-item work-card group" href="${work.link}" target="_blank" rel="noopener">
             <div class="thumb"><img src="${work.image}" alt="${work.title || work.student}" loading="lazy" onerror="this.onerror=null;this.src='${work.fallback}'"></div>
             <div class="pt-4 px-1">
@@ -98,28 +121,96 @@ function renderGallerySlides() {
             </div>
         </a>`);
 
-    const build = () => { track.className = ''; buildMarquee(track, items, { axis: 'x', speed: 45, minSize: view.clientWidth }); };
+    const build = () => {
+        track.className = '';
+        buildMarquee(track, items, {
+            axis: 'x',
+            speed: 45,
+            minSize: view.clientWidth
+        });
+    };
+
     build();
     bindPauseButton(document.getElementById('gal-pause'), view);
 
     let w = innerWidth, t;
-    addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => { if (innerWidth !== w) { w = innerWidth; build(); } }, 250); });
+    addEventListener('resize', () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+            if (innerWidth !== w) {
+                w = innerWidth;
+                build();
+            }
+        }, 250);
+    });
 }
 
 // ==========================================
-// 4. TEAM FANNED CARDS (LANDO NORRIS AUTOMATIC SCROLL INTERACTION)
+// 4. TEAM FANNED CARDS
 // ==========================================
 let currentTeamIdx = 0;
 let isAnimatingTeam = false;
 
+// Auto-play configuration
+let teamAutoPlay = null;
+let teamInteractionTimeout = null;
+
+const TEAM_AUTO_PLAY_DELAY = 3000;
+const TEAM_RESUME_DELAY = 5000;
+
+// ------------------------------------------
+// AUTO PLAY CONTROLS
+// ------------------------------------------
+function startTeamAutoPlay() {
+    stopTeamAutoPlay();
+
+    teamAutoPlay = setInterval(() => {
+        if (document.hidden) return;
+
+        currentTeamIdx = (currentTeamIdx + 1) % teamMembers.length;
+        updateFannedCardsPositions();
+    }, TEAM_AUTO_PLAY_DELAY);
+}
+
+function stopTeamAutoPlay() {
+    if (teamAutoPlay !== null) {
+        clearInterval(teamAutoPlay);
+        teamAutoPlay = null;
+    }
+}
+
+function pauseTeamAutoPlay() {
+    stopTeamAutoPlay();
+    clearTimeout(teamInteractionTimeout);
+
+    teamInteractionTimeout = setTimeout(() => {
+        startTeamAutoPlay();
+    }, TEAM_RESUME_DELAY);
+}
+
+// Pause when the browser tab is hidden
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        stopTeamAutoPlay();
+        clearTimeout(teamInteractionTimeout);
+    } else {
+        startTeamAutoPlay();
+    }
+});
+
+// ------------------------------------------
+// RENDER FAN CARDS
+// ------------------------------------------
 function renderFannedCards() {
     const stage = document.getElementById('fanned-stage-area');
     stage.innerHTML = '';
 
     teamMembers.forEach((member, i) => {
         const card = document.createElement('div');
+
         card.className = `team-card flex flex-col overflow-hidden ${i === currentTeamIdx ? 'active-card' : ''}`;
         card.setAttribute('data-index', i);
+
         card.innerHTML = `
             <div class="h-3/4 relative overflow-hidden bg-cream">
                 <img src="${member.avatar}" alt="${member.name}" class="w-full h-full object-cover pointer-events-none">
@@ -134,11 +225,14 @@ function renderFannedCards() {
             </div>
         `;
 
+        // Click card to select member
         card.addEventListener('click', () => {
             if (currentTeamIdx !== i) {
                 currentTeamIdx = i;
                 updateFannedCardsPositions();
             }
+
+            pauseTeamAutoPlay();
         });
 
         stage.appendChild(card);
@@ -147,56 +241,59 @@ function renderFannedCards() {
     updateFannedCardsPositions(false);
 }
 
+// ------------------------------------------
+// UPDATE CARD POSITIONS
+// ------------------------------------------
 function updateFannedCardsPositions(animate = true) {
     const cards = document.querySelectorAll('.team-card');
-    const total = teamMembers.length;
 
     cards.forEach((card, i) => {
         let offset = i - currentTeamIdx;
 
-        // Handle index offset wrap/distance
-        let rotation = offset * 7.5; // Fan angles (-20deg to +20deg approx)
-        let translateX = offset * 65; // Horizontal spread
-        let translateY = Math.abs(offset) * 12; // Curvature down
-        let scale = i === currentTeamIdx ? 1.15 : Math.max(0.8, 1 - Math.abs(offset) * 0.08);
+        let rotation = offset * 7.5;
+        let translateX = offset * 65;
+        let translateY = Math.abs(offset) * 12;
+        let scale = i === currentTeamIdx
+            ? 1.15
+            : Math.max(0.8, 1 - Math.abs(offset) * 0.08);
+
         let zIndex = 50 - Math.abs(offset) * 5;
         let opacity = Math.abs(offset) > 3 ? 0.2 : 1;
 
         if (i === currentTeamIdx) {
-            rotation = 0; // Active center card turns upright (0 deg)
+            rotation = 0;
             translateY = -15;
             card.classList.add('active-card');
         } else {
             card.classList.remove('active-card');
         }
 
+        const animationProps = {
+            rotation,
+            x: translateX,
+            y: translateY,
+            scale,
+            zIndex,
+            opacity
+        };
+
         if (animate) {
             gsap.to(card, {
-                rotation: rotation,
-                x: translateX,
-                y: translateY,
-                scale: scale,
-                zIndex: zIndex,
-                opacity: opacity,
+                ...animationProps,
                 duration: 0.45,
                 ease: "power2.out"
             });
         } else {
-            gsap.set(card, {
-                rotation: rotation,
-                x: translateX,
-                y: translateY,
-                scale: scale,
-                zIndex: zIndex,
-                opacity: opacity
-            });
+            gsap.set(card, animationProps);
         }
     });
 
-    // Update Active Team Bio Panel with GSAP Transition
     updateTeamBioPanel(teamMembers[currentTeamIdx]);
 }
 
+// ------------------------------------------
+// UPDATE BIO PANEL
+// ------------------------------------------
 function updateTeamBioPanel(member) {
     const panel = document.getElementById('team-bio-panel');
 
@@ -212,7 +309,8 @@ function updateTeamBioPanel(member) {
             document.getElementById('bio-nim').innerText = member.nim;
             document.getElementById('bio-desc').innerText = member.bio;
             document.getElementById('bio-quote').innerText = `"${member.quote}"`;
-            document.getElementById('bio-index').innerText = `0${member.id} / 0${teamMembers.length}`;
+            document.getElementById('bio-index').innerText =
+                `0${member.id} / 0${teamMembers.length}`;
 
             gsap.to(panel, {
                 opacity: 1,
@@ -224,40 +322,52 @@ function updateTeamBioPanel(member) {
     });
 }
 
-// Mouse Wheel Scroll Listener for Team Cards Section
+// ------------------------------------------
+// MOUSE WHEEL SCROLL
+// ------------------------------------------
 const fannedSection = document.getElementById('tim');
 let wheelCooldown = false;
 
 fannedSection.addEventListener('wheel', (e) => {
-    // Check if mouse is near or over fanned area
     const rect = fannedSection.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
+
+    const inView =
+        rect.top < window.innerHeight / 2 &&
+        rect.bottom > window.innerHeight / 2;
 
     if (inView && !wheelCooldown) {
+        let changed = false;
+
         if (e.deltaY > 0) {
-            // Scroll down -> next member
-            if (currentTeamIdx < teamMembers.length - 1) {
-                currentTeamIdx++;
-                updateFannedCardsPositions();
-                triggerWheelCooldown();
-            }
+            currentTeamIdx =
+                (currentTeamIdx + 1) % teamMembers.length;
+            changed = true;
+
         } else if (e.deltaY < 0) {
-            // Scroll up -> previous member
-            if (currentTeamIdx > 0) {
-                currentTeamIdx--;
-                updateFannedCardsPositions();
-                triggerWheelCooldown();
-            }
+            currentTeamIdx =
+                (currentTeamIdx - 1 + teamMembers.length) % teamMembers.length;
+            changed = true;
+        }
+
+        if (changed) {
+            updateFannedCardsPositions();
+            triggerWheelCooldown();
+            pauseTeamAutoPlay();
         }
     }
 }, { passive: true });
 
 function triggerWheelCooldown() {
     wheelCooldown = true;
-    setTimeout(() => { wheelCooldown = false; }, 350);
+
+    setTimeout(() => {
+        wheelCooldown = false;
+    }, 350);
 }
 
-// Touch Swipe Gesture for Mobile on Fanned Area
+// ------------------------------------------
+// TOUCH SWIPE - MOBILE
+// ------------------------------------------
 let touchStartX = 0;
 const stageArea = document.getElementById('fanned-stage-area');
 
@@ -266,17 +376,21 @@ stageArea.addEventListener('touchstart', (e) => {
 }, { passive: true });
 
 stageArea.addEventListener('touchend', (e) => {
-    let touchEndX = e.changedTouches[0].clientX;
-    let diff = touchStartX - touchEndX;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
 
     if (Math.abs(diff) > 40) {
-        if (diff > 0 && currentTeamIdx < teamMembers.length - 1) {
-            currentTeamIdx++;
-            updateFannedCardsPositions();
-        } else if (diff < 0 && currentTeamIdx > 0) {
-            currentTeamIdx--;
-            updateFannedCardsPositions();
+        if (diff > 0) {
+            currentTeamIdx =
+                (currentTeamIdx + 1) % teamMembers.length;
+
+        } else {
+            currentTeamIdx =
+                (currentTeamIdx - 1 + teamMembers.length) % teamMembers.length;
         }
+
+        updateFannedCardsPositions();
+        pauseTeamAutoPlay();
     }
 }, { passive: true });
 
@@ -390,6 +504,7 @@ window.onload = function() {
         duration: 1,
         ease: 'power3.out'
     });
+    startTeamAutoPlay();
 };
 
 // VIDEO HERO
