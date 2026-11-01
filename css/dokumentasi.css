@@ -1,0 +1,45 @@
+/* Dokumentasi: 7 momen acara, kotak persegi panjang bergaya editorial */
+.dok-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 24px; grid-auto-flow: dense; }
+.dok-tile { display: flex; flex-direction: column; text-align: left; background: none; border: 0; padding: 0; color: #F2EEE6; font: inherit; cursor: pointer; }
+.dok-tile.w2 { grid-column: span 2; }
+.dok-tile.w4 { grid-column: span 4; }
+.dok-tile.nofoto { cursor: default; }
+
+.dok-img { position: relative; flex: 1; min-height: 260px; overflow: hidden; background: #141414; }
+.dok-tile.big .dok-img { min-height: 400px; }
+.dok-tile.w4 .dok-img { min-height: 340px; }
+.dok-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; letter-spacing: -.04em; font-size: clamp(4rem, 9vw, 8rem); color: rgba(255, 107, 26, .28); }
+.dok-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity 1.1s ease, transform 6s ease-out; }
+.dok-img img.on { opacity: 1; transform: scale(1); }
+
+.dok-label { padding-top: 12px; min-height: 92px; }   /* tinggi label seragam supaya dasar foto sejajar */
+.dok-no { display: block; font: 600 10px 'Inter', sans-serif; letter-spacing: .25em; color: #FF6B1A; }
+.dok-judul { display: inline; margin-top: 4px; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s; }
+.dok-tile:not(.nofoto):hover .dok-judul { background-size: 100% 1px; }
+.dok-ket { display: block; margin-top: 3px; font-size: .8rem; color: #8C877D; }
+.dok-count { display: block; margin-top: 6px; font: 600 10px 'Inter', sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #8C877D; }
+
+@media (max-width: 1024px) {
+  .dok-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dok-tile.w4 { grid-column: span 2; }
+  .dok-tile.big .dok-img { min-height: 300px; }
+}
+@media (max-width: 560px) {
+  .dok-grid { grid-template-columns: 1fr; }
+  .dok-tile.w2, .dok-tile.w4 { grid-column: span 1; }
+  .dok-tile.big .dok-img, .dok-tile.w4 .dok-img, .dok-img { min-height: 240px; }
+}
+
+/* Pemutar foto layar penuh */
+.dok-lb { position: fixed; inset: 0; z-index: 80; display: none; flex-direction: column; align-items: center; justify-content: center; background: rgba(0, 0, 0, .94); padding: 24px; }
+.dok-lb.open { display: flex; }
+.dok-lb img { max-width: min(1100px, 100%); max-height: 76vh; object-fit: contain; }
+.dok-lb .cap { margin-top: 16px; text-align: center; color: #F2EEE6; }
+.dok-lb .cap b { display: block; font-size: 1.05rem; letter-spacing: -.01em; }
+.dok-lb .cap span { display: block; margin-top: 4px; font: 600 10px 'Inter', sans-serif; letter-spacing: .22em; text-transform: uppercase; color: #8C877D; }
+.dok-lb .cap em { font-style: normal; color: #FF6B1A; }
+.dok-lb button { position: absolute; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(242, 238, 230, .3); background: rgba(0, 0, 0, .4); color: #F2EEE6; font-size: 22px; line-height: 1; cursor: pointer; transition: background .2s, border-color .2s; }
+.dok-lb button:hover { background: #FF6B1A; border-color: #FF6B1A; color: #000; }
+.dok-lb .x { top: 20px; right: 20px; }
+.dok-lb .prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.dok-lb .next { right: 20px; top: 50%; transform: translateY(-50%); }

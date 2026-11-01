@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/dokumentasi.css">
     <link rel="stylesheet" href="css/editorial.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%83%3C/text%3E%3C/svg%3E">
 </head>
@@ -57,8 +58,8 @@
     <!-- VIDEO HERO (tampil pertama di monitor booth) -->
     <section id="video-hero" class="relative h-screen pt-[68px] bg-black overflow-hidden">
         <video id="hero-video" class="absolute inset-0 w-full h-full object-cover" style="top:68px;height:calc(100% - 68px)"
-               autoplay muted loop playsinline preload="auto" poster="video/poster.jpg">
-            <source src="video/workshop.mp4" type="video/mp4">
+               autoplay muted loop playsinline preload="auto" poster="video/flyer.jpeg">
+            <source src="video/WORKSHOP.mp4" type="video/mp4">
         </video>
         <!-- Cadangan jika file video belum ada / gagal dimuat -->
         <div id="video-fallback" class="hidden absolute inset-0 flex items-center justify-center text-center px-6 bg-creamDark text-white" style="top:68px">
@@ -97,7 +98,11 @@
                     </h1>
                 </div>
                 <div class="max-w-md text-sm text-subtleDark font-medium leading-relaxed">
-                    Pameran e-portfolio hasil karya terpilih dari peserta Digital Workshop 2026. Menampilkan inovasi Web Development, UI/UX Design, dan Creative Graphic Art secara terkurasi.
+                    <h2 class="font-syne font-bold text-xl text-dark mb-3">Merangkai Identitas, Menampilkan Potensi.</h2>
+                    <p>Pameran e-portfolio digital hasil karya peserta Digital Workshop 2026. 
+                        Melalui Canva, peserta mengeksplorasi personal branding dengan mengemas identitas, potensi, 
+                        dan kreativitas ke dalam portofolio digital yang personal dan profesional.
+                    </p>
                 </div>
             </div>
 
@@ -161,7 +166,7 @@
     <!-- SECTION 2: PROFIL TIM 8 ANGGOTA (LANDO NORRIS FANNED CARDS STYLE) -->
     <section id="tim" class="py-24 px-6 bg-creamDark border-t border-b border-dark/10 relative">
         <div class="max-w-7xl mx-auto text-center mb-8">
-            <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">02 / INTERACTIVE TEAM STACK</span>
+            <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">02 / OUR TEAM</span>
             <h2 class="font-syne font-extrabold text-4xl sm:text-6xl uppercase tracking-tight mt-1">
                 ANGGOTA TIM WORKSHOP
             </h2>
@@ -230,109 +235,60 @@
 
     <!-- SECTION 3: DOKUMENTASI WORKSHOP -->
     <section id="dokumentasi" class="py-24 px-6 bg-cream border-b border-dark/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-12">
-                <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">03 / HIGHLIGHTS & MEDIA</span>
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+            <div>
+                <span class="font-syne text-sm font-bold text-accent tracking-widest uppercase">03 / DOKUMENTASI</span>
                 <h2 class="font-syne font-extrabold text-4xl sm:text-6xl uppercase tracking-tight mt-1">
                     DOKUMENTASI WORKSHOP
                 </h2>
+                <p class="text-muted mt-3 max-w-xl">Momen-momen dari acara, berurutan dari pembukaan sampai foto bersama. Klik untuk melihat semua fotonya.</p>
             </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Video Recap Player Mockup -->
-                <div class="lg:col-span-7 bg-creamDark border border-dark/10 rounded-3xl p-4 sm:p-6 text-dark shadow-xl">
-                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
-                        <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                            <span class="text-xs font-mono ml-2 text-white/60">RECAP_WORKSHOP_2026.MP4</span>
-                        </div>
-                        <span class="px-2 py-0.5 bg-accent text-white font-bold text-[10px] rounded uppercase">4K HD</span>
-                    </div>
-
-                    <div class="relative aspect-video rounded-2xl overflow-hidden bg-zinc-900 group cursor-pointer border border-white/10" id="video-mockup-trigger">
-                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Video Recap Cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        
-                        <!-- Center Play Button -->
-                        <div class="absolute inset-0 flex flex-col items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-accent text-white flex items-center justify-center text-2xl group-hover:scale-110 shadow-2xl transition-transform">
-                                <i class="fa-solid fa-play ml-1"></i>
-                            </div>
-                            <span class="font-syne font-bold text-sm tracking-widest uppercase mt-4 text-white">Putar Video Recap (2:45)</span>
-                        </div>
-
-                        <!-- Mock Player Controls -->
-                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white/80">
-                            <span>01:12 / 02:45</span>
-                            <div class="flex-1 mx-4 h-1.5 bg-white/20 rounded-full overflow-hidden">
-                                <div class="w-1/2 h-full bg-accent"></div>
-                            </div>
-                            <i class="fa-solid fa-expand"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Documentation Photo Grid -->
-                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
-                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" data-caption="Sesi Mentoring UI/UX Design & Typography">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Mentoring Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
-                            <span class="text-xs font-bold text-accent uppercase">Mentoring</span>
-                            <p class="text-xs font-semibold">Diskusi Layout & Grid Systems</p>
-                        </div>
-                    </div>
-
-                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" data-caption="Presentasi Karya Murid Di Depan Mentor">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Student Presentation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
-                            <span class="text-xs font-bold text-accent uppercase">Review</span>
-                            <p class="text-xs font-semibold">Presentasi Akhir E-Portfolio</p>
-                        </div>
-                    </div>
-
-                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" data-caption="Workshop Live Coding & Interactive Animation">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Live Coding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
-                            <span class="text-xs font-bold text-accent uppercase">Live Code</span>
-                            <p class="text-xs font-semibold">Eksperimentasi GSAP Animation</p>
-                        </div>
-                    </div>
-
-                    <div class="doc-photo-item group cursor-pointer relative overflow-hidden rounded-2xl aspect-square bg-creamDark" data-img="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" data-caption="Sesi Foto Bersama Anggota & Peserta">
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Group Photo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
-                            <span class="text-xs font-bold text-accent uppercase">Cohort 2026</span>
-                            <p class="text-xs font-semibold">Selebrasi Penutupan Exhibition</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <button id="dok-pause" class="mq-btn"></button>
         </div>
-    </section>
+
+        <div id="dok-grid" class="dok-grid"></div>
+
+        <span id="video-mockup-trigger" hidden></span>
+    </div>
+</section>
 
     <!-- SECTION 4: TENTANG WORKSHOP -->
     <section id="info" class="py-20 px-6 bg-creamDark text-dark border-t border-dark/10">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div>
-                <span class="font-syne text-xs font-bold text-accent tracking-widest uppercase">ABOUT WORKSHOP</span>
+                <span class="font-syne text-xs font-bold text-accent tracking-widest uppercase">
+                    ABOUT THE WORKSHOP
+                </span>
+
                 <h2 class="font-syne font-extrabold text-3xl sm:text-5xl uppercase tracking-tight mt-1">
-                    DIGITAL WORKSHOP 2026
+                    WORKSHOP<br>
+                    PORTOFOLIO DIGITAL
                 </h2>
-                <p class="text-sm text-zinc-400 max-w-xl mt-3 leading-relaxed">
-                    Program akselerasi talenta digital modern yang menggabungkan estetika desain editorial dengan teknologi pengembangan web terkini.
+
+                <p class="text-sm text-subtleDark max-w-xl mt-3 leading-relaxed">
+                    Workshop Portofolio Digital merupakan kegiatan pengembangan
+                    kreativitas digital melalui pembuatan e-portfolio menggunakan Canva.
+                    Peserta diajak mengenali potensi diri, membangun personal branding,
+                    serta mengemas identitas dan karya dalam portofolio digital.
                 </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mt-6 text-xs font-semibold uppercase tracking-wider text-subtleDark">
+                    <span>
+                        <i class="fa-solid fa-location-dot text-accent mr-2"></i>
+                        SMK Negeri 2 Depok, Sleman
+                    </span>
+                    <span>
+                        <i class="fa-regular fa-calendar text-accent mr-2"></i>
+                        1 Oktober 2026
+                    </span>
+                </div>
             </div>
+
             <div class="flex flex-wrap gap-4">
                 <a href="#galeri" class="px-6 py-3 bg-accent text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-accentHover transition-colors">
-                    Lihat Katalog Karya
+                    Explore The Gallery
                 </a>
-                <button onclick="alert('Terima kasih! Brosur Digital Portfolio Workshop 2026 siap diunduh.')" class="px-6 py-3 border border-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-full hover:bg-white hover:text-dark transition-colors">
-                    Download Catalog PDF
-                </button>
             </div>
         </div>
     </section>
@@ -376,5 +332,6 @@
     <script src="js/karya-loader.js"></script>
     <script src="js/marquee.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/dokumentasi.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ const teamMembers = [
     badge: "PROJECT LEADER",
     bio: "Mengoordinasikan seluruh rangkaian kegiatan Digital Workshop 2026 serta mengarahkan koordinasi antaranggota dan divisi.",
     quote: "Kegiatan yang bermakna terwujud ketika setiap orang bergerak menuju tujuan yang sama.",
-    avatar: "URL_FOTO_AMMAR"
+    avatar: "img/member/ammar.JPG"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const teamMembers = [
     badge: "SECRETARY",
     bio: "Mengelola administrasi dan kebutuhan kesekretariatan serta membantu koordinasi konsumsi untuk mendukung kelancaran kegiatan.",
     quote: "Keteraturan dalam persiapan membantu setiap kegiatan berjalan lebih lancar.",
-    avatar: "URL_FOTO_RISCHA"
+    avatar: "img/member/rischa.JPG"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const teamMembers = [
     badge: "TREASURER",
     bio: "Mengelola pencatatan dan kebutuhan keuangan kegiatan serta mendukung koordinasi konsumsi peserta.",
     quote: "Tanggung jawab dalam hal kecil ikut menentukan keberhasilan bersama.",
-    avatar: "URL_FOTO_LISA"
+    avatar: "img/member/lisa.jpg"
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const teamMembers = [
     badge: "EVENT HOST",
     bio: "Memandu jalannya acara dan menghubungkan setiap sesi agar rangkaian workshop berlangsung tertib dan komunikatif.",
     quote: "Suasana yang hangat membuat setiap pengalaman lebih berkesan.",
-    avatar: "URL_FOTO_ELSA"
+    avatar: "img/member/elsa.jpg"
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const teamMembers = [
     badge: "THEORY SPEAKER",
     bio: "Menyampaikan materi dan penjelasan konseptual sebagai bekal peserta memahami dasar serta tahapan pembuatan portofolio digital.",
     quote: "Pemahaman yang kuat menjadi awal dari praktik yang terarah.",
-    avatar: "URL_FOTO_APAF"
+    avatar: "img/member/jia.JPG"
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ const teamMembers = [
     badge: "PRACTICE MENTOR",
     bio: "Mendampingi peserta dalam demonstrasi dan praktik pembuatan portofolio digital serta membantu peserta menerapkan materi secara langsung.",
     quote: "Belajar menjadi lebih bermakna ketika kita berani mencoba dan berkarya.",
-    avatar: "URL_FOTO_RAHMA"
+    avatar: "img/member/rahma.jpg"
   },
   {
     id: 7,
@@ -75,7 +75,7 @@ const teamMembers = [
     badge: "PUBLICATION & MEDIA",
     bio: "Mendukung publikasi dan dokumentasi kegiatan serta menyiapkan kebutuhan media visual Digital Workshop 2026.",
     quote: "Setiap momen memiliki cerita yang layak untuk dibagikan.",
-    avatar: "URL_FOTO_MIFTAHUL"
+    avatar: "img/member/miftah.JPG"
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const teamMembers = [
     badge: "PUBLIC RELATIONS & LOGISTICS",
     bio: "Menghubungkan komunikasi dengan pihak terkait serta menyiapkan kebutuhan perlengkapan agar kegiatan berjalan lancar.",
     quote: "Kolaborasi yang baik juga dibangun melalui komunikasi dan kesiapan.",
-    avatar: "URL_FOTO_IBNU"
+    avatar: "img/member/ibnu.JPG"
   }
 ];
 
